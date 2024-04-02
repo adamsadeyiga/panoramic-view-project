@@ -1,0 +1,19 @@
+// Define variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+// Define mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Define styles
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+// Add more styles as needed

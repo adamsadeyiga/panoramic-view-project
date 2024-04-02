@@ -1,6 +1,8 @@
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
-const panoramicRoutes = require("./routes/panoramicRoutes");
+const propertiesRoutes = require("./routes/propertiesRoutes");
+const authRoutes = require("./routes/authRoutes");
 
 const app = express();
 
@@ -15,9 +17,12 @@ mongoose
 
 // Middleware
 app.use(express.json());
+// Enable CORS for all routes
+app.use(cors());
 
 // Routes
-app.use("/api", panoramicRoutes);
+app.use("/api", propertiesRoutes);
+app.use("/api", authRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 3000;
